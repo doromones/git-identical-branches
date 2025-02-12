@@ -25,6 +25,7 @@ def run_git_command(args, cwd=None):
 
     Raises subprocess.CalledProcessError if the command fails.
     """
+    print(f"Running git command: {['git'] + args}")
     result = subprocess.run(["git"] + args, capture_output=True, text=True, cwd=cwd)
     if result.returncode != 0:
         raise subprocess.CalledProcessError(
