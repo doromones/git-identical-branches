@@ -17,7 +17,6 @@ A Git extension to find and manage local branches that have no changes relative 
 
 ```bash
 git identical-branches <subcommand> [reference]
-
 ```
 
 ## Help
@@ -45,8 +44,8 @@ optional arguments:
 ### Curl
 ```bash
 sudo curl -L "https://raw.githubusercontent.com/doromones/git-identical-branches/main/git-identical-branches.py" \
-     -o /usr/local/bin/git-identical-branches
-sudo chmod +x /usr/local/bin/git-identical-branches
+     -o /usr/local/bin/git-identical-branches \
+     && sudo chmod +x /usr/local/bin/git-identical-branches
 ```
 
 ### Local

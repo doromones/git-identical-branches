@@ -225,11 +225,13 @@ def main():
         sys.exit(1)
 
     args = parser.parse_args()
-    try:
-        args.func(args)
-    except subprocess.CalledProcessError as e:
-        print(f"Error: {e.stderr.strip() or e.output.strip()}", file=sys.stderr)
-        sys.exit(e.returncode)
+    args.func(args)
+
+    # try:
+    #     args.func(args)
+    # except subprocess.CalledProcessError as e:
+    #     print(f"Error: {e.stderr.strip() or e.output.strip()}", file=sys.stderr)
+    #     sys.exit(e.returncode)
 
 
 if __name__ == "__main__":
